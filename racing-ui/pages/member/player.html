@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/okadmin.css">
+</head>
+<body>
+<div class="ok-body">
+    <!--面包屑导航区域-->
+    <div class="ok-body-breadcrumb">
+        <span class="layui-breadcrumb">
+            <a><cite>首页</cite></a>
+            <a><cite>观察大佬</cite></a>
+            <a><cite>好友链接</cite></a>
+        </span>
+        <a class="layui-btn layui-btn-sm" href="javascript:location.replace(location.href);" title="刷新">
+            <i class="layui-icon layui-icon-refresh"></i>
+        </a>
+    </div>
+    <!--模糊搜索区域-->
+    <div class="layui-row">
+        <form class="layui-form layui-col-md12 ok-search">
+            <input class="layui-input" placeholder="搜索开发中" autocomplete="off" name="description">
+            <button class="layui-btn" lay-submit="" lay-filter="search">
+                <i class="layui-icon layui-icon-search"></i>
+            </button>
+        </form>
+    </div>
+    <!--数据表格-->
+    <table class="layui-hide" id="tableId" lay-filter="tableFilter"></table>
+</div>
+<!--js逻辑-->
+<script src="../../lib/layui/layui.js"></script>
+<script src="../../js/member/player.js"></script>
+<!-- 头工具栏模板 -->
+<script type="text/html" id="toolbarTpl">
+	<div class="layui-btn-container">
+		<button class="layui-btn layui-btn-sm" lay-event="add"><i class="layui-icon">&#xe61f;</i>添加链接</button>
+	</div>
+</script>
+<!-- 启用|停用模板
+    <input type="checkbox" name="status" value="{{d.id}}" lay-skin="switch" lay-text="启用|停用" {{ d.status== 0 ? 'checked' : ''}}>
+-->
+<script type="text/html" id="url">
+    {{#  if(d.url != null){ }}
+        <span class="layui-btn layui-btn-normal layui-btn-xs"><a href="{{ d.url}}">加他好友</a></span>
+    {{#  } }}
+</script>
+<!-- 角色模板 -->
+<script type="text/html" id="roleTpl">
+    {{ d.role == 0 ? '管理员' : '普通用户    '}}
+</script>
+<!-- 行工具栏模板 -->
+<script type="text/html" id="operationTpl">
+    <a href="javascript:;" title="编辑" lay-event="edit"><i class="layui-icon">&#xe642;</i></a>
+    <a href="javascript:;" title="删除" lay-event="del"><i class="layui-icon">&#xe640;</i></a>
+</script>
+</body>
+</html>

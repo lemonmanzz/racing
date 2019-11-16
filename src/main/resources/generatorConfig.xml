@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<properties resource="classpath:application.yml"/>
+  <context id="player" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+  	<property name="beginningDelimiter" value="`"/>
+  	<property name="endingDelimiter" value="`"/>
+  	<commentGenerator >
+  		<property name="suppressAllComments" value="false"/><!-- 是否取消注释 --> 
+  		<property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳--> 
+  	</commentGenerator>
+    <jdbcConnection connectionURL="${spring.datasource.url}" driverClass="${spring.datasource.driverClassName}" password="${spring.datasource.password}" userId="${spring.datasource.username}" />
+    <javaModelGenerator targetPackage="com.hiccup.domain" targetProject="src/main/java" >
+    	<property name="enableSubPackages" value="false"/>
+    </javaModelGenerator>
+    <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources" >
+		<property name="enableSubPackages" value="false" />
+    </sqlMapGenerator>
+    <javaClientGenerator targetPackage="com.hiccup.dao" targetProject="src/main/java" type="XMLMAPPER" >
+		<property name="enableSubPackages" value="false" />
+    </javaClientGenerator>
+    <table schema="racing" tableName="t_player" domainObjectName="Player" enableInsert="true" enableSelectByPrimaryKey="true" enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true">
+      <columnOverride column="id" property="id" />
+      <columnOverride column="user_id" property="userId" />
+      <columnOverride column="energy" property="energy" />
+      <columnOverride column="url" property="url" />
+      <columnOverride column="title" property="title" />
+      <columnOverride column="status" property="status" />
+      <columnOverride column="description" property="description" />
+    </table>
+  </context>
+</generatorConfiguration>

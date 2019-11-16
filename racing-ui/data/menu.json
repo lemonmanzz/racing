@@ -1,0 +1,112 @@
+{
+    "status": 1000,
+    "msg": "操作成功",
+    "data": [
+        {
+            "title": "观察大佬",
+            "path": "",
+            "font": "layui-icon",
+            "icon": "&#xe66f;",
+            "spread": true,
+            "children": [
+                {
+                    "title": "好友链接",
+                    "path": "pages/member/player.html",
+                    "font": "iconfont",
+                    "icon": "&#xe639;",
+                    "spread": false
+                },
+                {
+                    "title": "排行榜",
+                    "path": "",
+                    "font": "iconfont",
+                    "icon": "&#xe614;",
+                    "spread": false
+                }
+            ]
+        },
+        {
+            "title": "攻略",
+            "path": "",
+            "font": "layui-icon",
+            "icon": "&#xe60b;",
+            "spread": true,
+            "children": [
+                {
+                    "title": "教程",
+                    "path": "",
+                    "font": "iconfont",
+                    "icon": "&#xe614;",
+                    "spread": false
+                },
+                {
+                    "title": "攻略",
+                    "path": "",
+                    "font": "iconfont",
+                    "icon": "&#xe768;",
+                    "spread": false
+                },
+                {
+                    "title": "视频",
+                    "path": "",
+                    "font": "iconfont",
+                    "icon": "&#xe768;",
+                    "spread": false
+                }
+            ]
+        },
+        {
+            "title": "小工具",
+            "path": "",
+            "font": "layui-icon",
+            "icon": "&#xe628;",
+            "spread": true,
+            "children": [
+                {
+                    "title": "计算活动所需钻石",
+                    "path": "pages/util/activity.html",
+                    "font": "iconfont",
+                    "icon": "&#xe61f;",
+                    "spread": false
+                },
+                {
+                    "title": "计算队赛分数",
+                    "path": "pages/util/compete.html",
+                    "font": "iconfont",
+                    "icon": "&#xe61f;",
+                    "spread": false
+                },
+                {
+                    "title": "计算升级所需金币",
+                    "path": "",
+                    "font": "iconfont",
+                    "icon": "&#xe61f;",
+                    "spread": false
+                }
+            ]
+        },
+        {
+            "title": "团队",
+            "path": "",
+            "font": "layui-icon",
+            "icon": "&#xe60b;",
+            "spread": true,
+            "children": [
+                {
+                    "title": "团队成员",
+                    "path": "",
+                    "font": "iconfont",
+                    "icon": "&#xe639;",
+                    "spread": false
+                },
+                {
+                    "title": "团队数据",
+                    "path": "",
+                    "font": "iconfont",
+                    "icon": "&#xe768;",
+                    "spread": false
+                }
+            ]
+        }
+    ]
+}

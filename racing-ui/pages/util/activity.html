@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>算算活动所需钻石</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/okadmin.css">
+</head>
+<body>
+<div class="ok-body">
+    <!--面包屑导航区域-->
+    <div class="ok-body-breadcrumb">
+        <span class="layui-breadcrumb">
+            <a><cite>首页</cite></a>
+            <a><cite>小工具</cite></a>
+            <a><cite>计算活动所需钻石</cite></a>
+        </span>
+        <a class="layui-btn layui-btn-sm" href="javascript:location.replace(location.href);" title="刷新">
+            <i class="layui-icon layui-icon-refresh"></i>
+        </a>
+    </div>
+    <!--form表单-->
+    <form class="layui-form layui-form-pane ok-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label">当前分数</label>
+            <div class="layui-input-block">
+                <input type="text" name="now_score" placeholder="当前分数" autocomplete="off" class="layui-input" lay-verify="required">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">目标分数</label>
+            <div class="layui-input-block">
+                <input type="text" name="target_score" placeholder="目标分数" autocomplete="off" class="layui-input" lay-verify="required">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">平均分数</label>
+            <div class="layui-input-block">
+                <input type="text" name="avg_score" placeholder="每次的平均分数" autocomplete="off" class="layui-input" lay-verify="required">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">剩余天数</label>
+            <div class="layui-input-block">
+                <input type="text" name="end_day" placeholder="剩余天数(可不填)" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="add">算一算</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+</div>
+<!--js逻辑-->
+<script src="../../lib/layui/layui.js"></script>
+<script src="../../js/util/activity.js"></script>
+</body>
+</html>
